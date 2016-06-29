@@ -1,0 +1,56 @@
+1
+NSPK
+4
+A
+B
+S1
+S2
+4
+Ka
+A
+A B S1 S2
+A S1
+Ka'
+A
+A
+A S1
+Kb
+B
+A B S1 S2
+B S2
+Kb'
+B
+B
+B S2
+A
+B
+m1 = encr( (Na,A_id), Kb)
+m1
+y
+A B
+y
+A B
+y
+A B
+B
+A
+Na_1 = proj ( decr( m1, Kb'), 1)
+A_id_1 = proj ( decr( m1, Kb'), 2)
+m2= encr( (Na_1,Nb), Ka);
+m2
+n
+n
+y
+A B
+y
+A B
+A
+B
+Nb_1 = proj( decr( m2, Ka'), 2)
+m3 = encr( Nb_1, Kb) )
+m3
+y
+A B
+y
+A B
+done

@@ -1,0 +1,70 @@
+1
+NSSK
+3
+A
+B
+S
+2
+Ka
+A
+A S
+A S
+Kb
+B
+B S
+B S
+A
+S
+m1 = (A, B, Na)
+m1
+n
+n
+n
+n
+S
+A
+A_1 = proj (m1,1)
+B_1 = proj( m1, 2)
+Na_1 = proj( m1, 3)
+m2_1 = mod ( Na_1,B_1,Kab )
+tkt = encr( (Kab, A_1), Kb)
+m3 = encr( ( m2_1,tkt), Ka)
+m3
+n
+n
+n
+y
+A B S
+y
+A B S
+n
+n
+A
+B
+m2_2 = proj (decr(m3, Ka), 1)
+tkt_1 = proj( m2_2, 2)
+A_2 = proj(m2_2, 2)
+Kab_1 = proj( m2_2, 3)
+tkt_1
+n
+n
+n
+n
+B
+A
+Kab_2 = proj (decr( tkt_1, Kb), 1)
+m4 = encr( Nb, Kab_2)
+m4
+n
+n
+n
+A
+B
+Nb_1 = decr( m4, Kab_1)
+m5= encr( Nb_1-1, Kab_1)
+m5
+n
+n
+n
+done
+
